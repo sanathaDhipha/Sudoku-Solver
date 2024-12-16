@@ -1,8 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TestSudoku" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/black</item>
+    <style name="Base.Theme.SUDOKU_SOLVER" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.TestSudoku" parent="Base.Theme.TestSudoku" />
+    <style name="Theme.SUDOKU_SOLVER" parent="Base.Theme.SUDOKU_SOLVER" />
 </resources>

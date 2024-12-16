@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".SudokuBoard">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardSudoku"
+    <com.example.sudoku_solver.SudokuBoardView
+        android:id="@+id/SudokuBoard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#373A40"
-        custom:cardCornerRadius="16dp"
-        custom:cardElevation="8dp"
+        custom:boardColor="#000000"
+        custom:letterColor="#000000"
         custom:layout_constraintBottom_toBottomOf="parent"
         custom:layout_constraintEnd_toEndOf="parent"
         custom:layout_constraintStart_toStartOf="parent"
         custom:layout_constraintTop_toTopOf="parent"
-        custom:layout_constraintVertical_bias="0.33">
+        custom:layout_constraintVertical_bias="0.276">
 
-        <com.example.testsudoku.SudokuBoardView
-            android:id="@+id/SudokuBoard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            custom:boardColor="@color/white"
-            custom:layout_constraintVertical_bias="0.276"
-            custom:letterColor="@color/white" />
-    </androidx.cardview.widget.CardView>
+    </com.example.sudoku_solver.SudokuBoardView>
 
-    <android.widget.Button
-        android:id="@+id/buttonFromSudokuBackToMain"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:layout_gravity="center"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:text="Done"
-        android:textColor="@color/white"
-        android:background="@drawable/button_popup_border"
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         custom:layout_constraintBottom_toBottomOf="parent"
         custom:layout_constraintEnd_toEndOf="parent"
-        custom:layout_constraintStart_toStartOf="parent" />
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/SudokuBoard"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/buttonFromSudokuBackToScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="32dp"
+            android:text="scan" />
+
+        <Button
+            android:id="@+id/buttonFromSudokuBackToMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="32dp"
+            android:text="done" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

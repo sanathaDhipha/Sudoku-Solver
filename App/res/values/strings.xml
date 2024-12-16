@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">testSudoku</string>
+    <string name="app_name">SUDOKU_SOLVER</string>
+    <string name="go_back">Back</string>
 </resources>
